@@ -7,38 +7,42 @@
     <meta name="description" content="Это сайт-резюме">
     <meta name="keywords" content="tegs, html, css, resume, website">
     <title>Resume Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="container">
+    <main class="info">
+        <img src="ava.jpg" alt="Фотография профиля">
+        <div class="text">
+            <h1 class="name">Степан Коротков</h1>
+                <div class="info-text">    
+                    <p>Я <strong>Степан Коротков,</strong> учусь в колледже на <strong><em>
+                    разработчика програмного обеспечения</em></strong>, мне очень нравится. 
+                    Сейчас много времени уделяю обучению.
+                    Много времени я <em>обучаюсь самостоятельно</em>.</p>
+                        
+                    <p>Также <em>являюсь владельцем нескольких ютуб каналов</em>, 
+                    <em>занимаюсь паркуром</em> и <em>пишу музыку</em>.</p>
+                </div>
+    </div> 
+    </main>
 
-    <img src="ava.jpg" alt="Фотография профиля" width="150" >
-    <h1>Степан Коротков</h1>
-        <p>Я <strong>Степан Коротков,</strong> учусь в колледже на <strong><em>
-            разработчика програмного обеспечения</em></strong>, мне очень нравится. 
-            <br>Сейчас много времени уделяю обучению.
-            Много времени я <em>обучаюсь самостоятельно</em>.</p>
-            
-        <p>Также <em>являюсь владельцем нескольких ютуб каналов</em>, 
-            <em>занимаюсь паркуром</em> и <em>пишу музыку</em>.</p>
+    <div class="card">
+        <h3>Мои хобби:</h3>
+            <ul class="list">
+                <li>Паркур</li>
+                <li>Блоггинг</li>
+                <li>Програмирование</li>
+                <li>Игра на гитаре</li>
+                <li>Написание битов</li>
+                <li>Чтение книг</li>
+            </ul>
+    </div>
 
-    <br>
-    <hr>
-
-    <h3>Мои хобби:</h3>
-        <ul>
-            <li>Паркур</li>
-            <li>Блоггинг</li>
-            <li>Програмирование</li>
-            <li>Игра на гитаре</li>
-            <li>Написание битов</li>
-            <li>Чтение книг</li>
-        </ul>
-
-    <br>
-    <hr>
-
-
+    <div class="card work">
     <h3>Опыт работы:</h3>
-        <table>
+        <table class="table">
             <thead>
                 <tr>
                     <th>Название</th>
@@ -62,42 +66,43 @@
             </tbody>
 
         </table>
+    </div>
 
+    <div class="card socnet">
+        <h4>Список моих социальных сетей:</h4>
+        
+        <p><a href="https://vk.com/tep98" target="_blank">Вк</a> | 
+        <a href="https://t.me/tep_98" target="_blank">Telegram</a> | 
+        <a href="https://korotkovstepan95@gmail.com" target="_blank">Почта</a></p>
+    </div>
 
-    <br>
-    <hr>
-
-    <h4>Список моих социальных сетей:</h4>
-    
-    <p><a href="https://vk.com/tep98" target="_blank">Вк</a> | 
-    <a href="https://t.me/tep_98" target="_blank">Telegram</a> | 
-    <a href="https://korotkovstepan95@gmail.com" target="_blank">Почта</a></p>
-
-    <br>
-    <hr>
-
-    <h3>Связаться со мной</h3>
+    <div class="card connect">
     <form action="">
-        <div>
-            <label for="Name_entry">Ваще имя:</label>
-            <input type="text" id="Name_entry" placeholder="Введите имя">
+        <h3>Связаться со мной</h3>
+
+        <div class="form-row">
+            <div class="user-info">
+                <label for="Name_entry"><strong>Ваше имя:</strong></label>
+                <input type="text" id="Name_entry" placeholder="Введите имя">
+            </div>
+
+            <div class="user-info">
+                <label for="email_entry"><strong>Ваш email:</strong></label>
+                <input type="email" id="email_entry" placeholder="Введите email">
+            </div>
         </div>
 
-        <div>
-            <label for="email_entry">Ваш email:</label>
-            <input type="email" id="email_entry" placeholder="Введите email">
-        </div>
-
-        <div>
-            <label for="massage_entry">Ваше сообщение:</label>
-            <br>
-            <textarea id="message_entry" cols="20" rows="5" 
+        <div class="user-info">
+            <label for="message_entry"><strong>Ваше сообщение:</strong></label>
+            <textarea id="message_entry" cols="20" rows="4" 
             placeholder="Введите сообщение..."></textarea>
 
         </div>
 
-        <button type="submit">Отправить!</button>
+        <button type="submit" id="submit_button" class="btn">Отправить!</button>
     </form>
+    </div>
+    </div>
 
 
 </body>
