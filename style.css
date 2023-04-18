@@ -7,6 +7,7 @@
 }
 
 
+
 body {
     font-size: 16px;
     font-family: 'Work Sans', sans-serif;
@@ -23,7 +24,8 @@ body {
     display: flex;
 }
     .info img {
-        width: 170px;
+        margin: auto;
+        width: 180px;
         border-radius: 10%;
         box-shadow: 4px 4px 20px rgba(27, 6, 6, 0.418);
     }
@@ -31,14 +33,53 @@ body {
 
 .name {
     margin-top: 15px;
-    margin-left: 40px;
+    margin: 0 40px;
 }
 
 .info-text {
     font-weight: bold;
     color: #b30e32;
     margin: 0;
-    margin-left: 40px;
+    margin: 0 40px;
+}
+
+@media (max-width:650px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width:450px) {
+        body {
+            display: block;
+        }
+    }
+
+    .container {
+        display: inline-block;
+        max-width: 450px;
+        margin: 10px 0;
+    }
+
+    .info {
+        display: block;
+        margin-bottom: 15px;
+        width: 450px;
+        justify-content: center;
+    }
+
+    .info img {
+        display: block;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .text {
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 
@@ -86,6 +127,17 @@ body {
             padding: 15px o 10px;
             outline: none;
             font-family: inherit;
+            resize: vertical;
+            min-height: 40px;
+            max-height: 200px;
+        }
+
+
+        @media (min-width:650px) {
+            
+            #message_entry:focus {
+                height: 100px;
+            }
         }
 
         #email_entry {
@@ -114,7 +166,22 @@ body {
             width: 50%;
         }
 
+        @media (max-width:650px) {
+            .form-row   {
+                display: block;
+                margin-bottom: 16px;  
+            }
+            
 
+    .user-info:first-child {
+        margin-bottom: 12px;
+    }
+
+    #message_entry {
+        resize: none;
+    }
+
+}
 
 a {
     color:#ff0015;
